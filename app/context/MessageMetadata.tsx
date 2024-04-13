@@ -8,7 +8,7 @@ import {
   useContext,
   useState,
 } from "react";
-import { MessageMetadata } from "../lib/types";
+import { MessageMetadata } from "@/lib/types";
 
 type MessageMetadataContext = {
   messageData: MessageMetadata[];

@@ -48,7 +48,6 @@ export const Controls = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [stopAudio, handleSubmit]
   );
-  
 
   return (
     <form onSubmit={submitter}>
@@ -60,7 +59,7 @@ export const Controls = ({
               microphoneOpen ? "red-500" : "gray-500"
             }`}
           >
-            <Tooltip showArrow content="Toggle microphone on/off.">
+            <Tooltip showArrow content="">
               <a
                 href="#"
                 onClick={(e: any) => microphoneToggle(e)}

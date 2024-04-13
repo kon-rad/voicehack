@@ -1,5 +1,6 @@
 import { Avatar } from "@nextui-org/react";
 import { DgSvg } from "./DgSvg";
+import Image from "next/image";
 import { Message } from "ai/react";
 import { useMessageData } from "../app/context/MessageMetadata";
 import { useAudioStore } from "../app/context/AudioStore";
@@ -26,5 +27,12 @@ export const AgentAvatar = ({
     return <Avatar src={voiceMap(foundData?.ttsModel).avatar} />;
   }
 
-  return <DgSvg />;
+  return (
+    <Image
+      src="/image/taylor.png"
+      width="160"
+      height="160"
+      className="rounded-full"
+    />
+  );
 };

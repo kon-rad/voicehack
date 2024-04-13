@@ -32,7 +32,7 @@ import { useAudioStore } from "../app/context/AudioStore";
  * Conversation element that contains the conversational AI app.
  * @returns {JSX.Element}
  */
-export default function Conversation(): JSX.Element {
+export default function Conversation({ setVideoUrl }: any): JSX.Element {
   /**
    * Custom context providers
    */
@@ -105,9 +105,23 @@ export default function Conversation(): JSX.Element {
     response: number;
   }>();
 
+  const requestVideo = async (msg: string) => {
+    console.log("msg", msg);
+
+    const res = await fetch(`/api/dream`, {
+      cache: "no-store",
+      method: "POST",
+      body: JSON.stringify({ content: msg }),
+    });
+
+    console.log("res: ", res);
+    setVideoUrl(res);
+  };
+
   const onFinish = useCallback(
     (msg: any) => {
       requestTtsAudio(msg);
+      requestVideo(msg);
     },
     [requestTtsAudio]
   );
@@ -296,6 +310,7 @@ export default function Conversation(): JSX.Element {
       .map(({ text }) => text)
       .join(" ")
       .trim();
+    console.log("content ", content);
 
     /**
      * if the entire utterance is empty, don't go any further

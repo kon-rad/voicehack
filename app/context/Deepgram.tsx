@@ -45,8 +45,8 @@ const voices: {
   };
 } = {
   "aura-asteria-en": {
-    name: "Asteria",
-    avatar: "/aura-asteria-en.svg",
+    name: "TaylorSwiftAi",
+    avatar: "/image/taylor.png",
     language: "English",
     accent: "US",
   },
@@ -126,6 +126,7 @@ const getApiKey = async (): Promise<string> => {
   const result: CreateProjectKeyResponse = await (
     await fetch("/api/authenticate", { cache: "no-store" })
   ).json();
+  console.log("result of api key ", result);
 
   return result.key;
 };
@@ -185,7 +186,7 @@ const DeepgramContextProvider = ({ children }: DeepgramContextInterface) => {
     }
 
     if (connection === undefined) {
-      connect();
+      // connect();
     }
   }, [connect, connection, sttOptions, ttsOptions]);
 
@@ -203,9 +204,9 @@ const DeepgramContextProvider = ({ children }: DeepgramContextInterface) => {
       });
 
       connection.addListener(LiveTranscriptionEvents.Error, () => {
-        toast(
-          "An unknown error occured. We'll attempt to reconnect to Deepgram."
-        );
+        // toast(
+        //   "An unknown error occured. We'll attempt to reconnect to Deepgram."
+        // );
         setConnectionReady(false);
         connection.removeAllListeners();
         setConnection(undefined);

@@ -26,9 +26,9 @@ export const LeftBubble = ({ message }: { message: Message }) => {
           </div>
         </div>
       </div>
-      <div className="col-start-1 col-end-13 px-3 pb-3">
+      {/* <div className="col-start-1 col-end-13 px-3 pb-3">
         <MessageMeta className="ml-14" message={message} />
-      </div>
+      </div> */}
     </>
   );
 };

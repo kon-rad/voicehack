@@ -25,7 +25,7 @@ const MessageHeader = ({
             ? voiceMap(foundAudio?.model).name
             : foundData?.ttsModel
             ? voiceMap(foundData?.ttsModel).name
-            : "Deepgram AI"}
+            : "Taylor Swift AI"}
         </span>
         <span className="text-xs font-normal text-gray-400">
           {moment().calendar()}

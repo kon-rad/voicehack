@@ -43,7 +43,7 @@
   dependencies:
     dayjs "^1.11.10"
 
-"@deepgram/sdk@^3.2.0":
+"@deepgram/sdk@^3.2.0-alpha.1":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@deepgram/sdk/-/sdk-3.2.0.tgz#ab3bc190700a0a38b460b392dee0fab64572222f"
   integrity sha512-k55M+QbT8oLeL5TNp6oFMKTz47AaY2D36Et7mGa/hLYW79zmqK5NNl+EmuxT4LS+NGgAGq1mz6dPCxPkQoHEkw==
