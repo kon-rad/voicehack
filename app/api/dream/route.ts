@@ -56,6 +56,8 @@ This is the user message, respond to the emotional tone of the message with your
         },
       }
     );
+    console.log("fal result: ", result);
+    console.log("result?.video?.url", result?.video?.url);
 
     return NextResponse.json(result);
   } catch (error) {

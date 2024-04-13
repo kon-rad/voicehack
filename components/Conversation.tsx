@@ -113,15 +113,26 @@ export default function Conversation({ setVideoUrl }: any): JSX.Element {
       method: "POST",
       body: JSON.stringify({ content: msg }),
     });
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
 
-    console.log("res: ", res);
-    setVideoUrl(res);
+    const data = await res.json(); // This line parses the JSON body of the response
+    console.log("res data: ", data);
+
+    console.log("res data video: ", data.video);
+    setVideoUrl(data.video.url);
+  };
+
+  const handleRecap = (msg) => {
+    console.log("msg", msg);
   };
 
   const onFinish = useCallback(
     (msg: any) => {
       requestTtsAudio(msg);
       requestVideo(msg);
+      handleRecap(msg);
     },
     [requestTtsAudio]
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Conversation from "./Conversation";
 import VideoChat from "./VideoChat";

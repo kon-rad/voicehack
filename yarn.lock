@@ -87,6 +87,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fal-ai/serverless-client@^0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@fal-ai/serverless-client/-/serverless-client-0.9.1.tgz#c16f1484aeaadd24ef8f5892a82ab7785b54d7da"
+  integrity sha512-ptcYO18Fa4v8/8DrMlSvmvxrjdbqxdjYatO5vu4ueZbootLyi0zVFkShvMThXY3I019d0NCGe/0LTtqXJqS8MQ==
+  dependencies:
+    "@msgpack/msgpack" "^3.0.0-beta2"
+    eventsource-parser "^1.1.2"
+    robot3 "^0.4.1"
+    uuid-random "^1.3.2"
+
 "@formatjs/ecma402-abstract@1.18.2":
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.18.2.tgz#bf103712a406874eb1e387858d5be2371ab3aa14"
@@ -217,6 +227,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
+
+"@msgpack/msgpack@^3.0.0-beta2":
+  version "3.0.0-beta2"
+  resolved "https://registry.yarnpkg.com/@msgpack/msgpack/-/msgpack-3.0.0-beta2.tgz#5bccee30f84df220b33905e3d8249ba96deca0b7"
+  integrity sha512-y+l1PNV0XDyY8sM3YtuMLK5vE3/hkfId+Do8pLo/OPxfxuFAUwcGz3oiiUuV46/aBpwTzZ+mRWVMtlSKbradhw==
 
 "@next/env@14.2.1":
   version "14.2.1"
@@ -3262,7 +3277,7 @@ events@^3.3.0:
   resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 
-eventsource-parser@1.1.2:
+eventsource-parser@1.1.2, eventsource-parser@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/eventsource-parser/-/eventsource-parser-1.1.2.tgz#ed6154a4e3dbe7cda9278e5e35d2ffc58b309f89"
   integrity sha512-v0eOBUbiaFojBu2s2NPBfYUoRR9GjcDNvCXVaqEf5vVfpIAh9f8RCo4vXTP8c63QRKCFwoLpMpTdPwwhEKVgzA==
@@ -5394,6 +5409,11 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
+robot3@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/robot3/-/robot3-0.4.1.tgz#b179edee27a1d7b6a99d03c494906c609fe28fca"
+  integrity sha512-hzjy826lrxzx8eRgv80idkf8ua1JAepRc9Efdtj03N3KNJuznQCPlyCJ7gnUmDFwZCLQjxy567mQVKmdv2BsXQ==
+
 run-parallel@^1.1.9:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.2.0.tgz#66d1368da7bdf921eb9d95bd1a9229e7f21a43ee"
@@ -6029,6 +6049,11 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+uuid-random@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/uuid-random/-/uuid-random-1.3.2.tgz#96715edbaef4e84b1dcf5024b00d16f30220e2d0"
+  integrity sha512-UOzej0Le/UgkbWEO8flm+0y+G+ljUon1QWTEZOq1rnMAsxo2+SckbiZdKzAHHlVh6gJqI1TjC/xwgR50MuCrBQ==
 
 vfile-message@^4.0.0:
   version "4.0.2"
